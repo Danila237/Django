@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'app_one/css/style.css' %}">
+</head>
+<body>
+    <aside>
+        <img src="{% static 'app_one/img/logo -2.png' %}">
+        <span class="logo">Rusty</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><i class=""></i><li>Главная</li></a>
+            <a href="{% url 'news_home' %}"><i class=""><li>Новости</li></a>
+            <a href="{% url 'about' %}"><i class=""></i><li>Про нас</li></a>
+            <a href="{% url 'contact' %}"><i class=""></i><li>Контакты</li></a>
+            <a href="{% url 'create' %}"><li><button class="button-create">Добавить</button></li><i class=""></i></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

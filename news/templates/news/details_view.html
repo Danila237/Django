@@ -1,0 +1,13 @@
+{% extends 'app_one/layout.html' %}
+
+{% block title %}
+    Rusty
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ articl.title }}</h1>
+        <p>{{ articl.date }}</p>
+        <p>{{ articl.full_text }}</p>
+    </div>
+{% endblock %}

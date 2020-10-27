@@ -1,0 +1,14 @@
+{% extends 'app_one/layout.html' %}
+
+{% block title %}
+    Rusty
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Applications developer</h1>
+        {% for el in values %}
+            <p>{{ el }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
